@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+        body{
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+         .header{
+            height: 10vh;
+            width: 100%;
+            background-color: blueviolet;
+            text-align: center;
+        }
+        a{
+            color: #312E81;
+            font-weight: bolder;
+            padding: 5px 20px;
+            background-color:#A78BFA;
+            text-decoration: none;
+            
+        }
+        section{
+            text-align: center;
+            background-color: #A78BFA;
+            height: 90vh;
+            padding-top: 10vh;
+        }
+        .box{
+            background-color: #8B5CF6;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        button{
+            padding: 5px 15px;
+            background-color: #A78BFA;
+            border: 1px solid #312E81;
+            margin-left: 10px;
+            font-weight: bolder;
+            font-size: 20px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        img{
+            clip-path: circle(50% at 50% 50%);
+            width: 100px;
+        }
+         footer{
+            text-align: center;
+            position:fixed;
+            bottom: 0px;
+            width: 100%;
+            height: 20px;
+        display: grid;
+        align-items: center;
+        font-weight: bolder;
+        border-top: 2px solid gray;
+        background: blueviolet;
+        font-size: 12px;
+        color: white;
+        }
+        button:hover{
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 2px solid blueviolet ;
+            color: white;
+            transition: 0.5s;
+        }
+        
+        button:focus{
+         font-size: 16px;
+         transition: 0s;
+        }
+        #s2{
+            background-color: #6E03BE;
+            height: 100vh;
+        }
+        .color{
+            background-color:#C7D2FE;
+            padding: 5px 10px;
+            border-left: 5px solid black;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header">
+            <div class="links"><br><br>
+            <a href="">HOME</a>
+            <a href="#s2">COLOR PICKER</a>
+            <a href="https://wa.me/qr/UINEZFC6CF5BB1">CONTACT ME</a>
+                </div></div>
+        </header>
+        <section>
+            
+            <div class="box" id="box">
+                <h1>Price Calculator</h1>
+                <img src="suretrusticon.jpg" alt="image">
+                <h3>Course: <span id="course">FSD</span></h3>
+                <h3> Min-Price: <span id="price">1000</span>rs</h3>
+                <br><div>
+                <button id="prev"><</button>
+                <button id="add">+</button>
+                <button id="next">></button></div><br>
+                <button id="result">Calculate</button>
+                
+            </div>
+            
+        </section>
+        <section id="s2">
+            <div><br><br><br><br><br><br><br><br><br>
+                <h2>Try many colors and pick the best for You. </h2>
+                <br>
+                <h1>Color Code:<span class="color" id ="color" title="Copy Me">#6E03BE </span></h1>
+                <br><br>
+                <button id="btn" class="btn">Click Me</button>
+            </div>
+        </section>
+        <footer>
+            <span>Created By Bhanu prakash</a> | <i class="fa fa-copyright" aria-hidden="true"></i>
+                2020 All rights reserved.</span>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script src="colors.js"></script>
+</body>
+</html>
