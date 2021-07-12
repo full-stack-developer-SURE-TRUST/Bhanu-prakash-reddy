@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+        .container{
+            border: 5px solid green;
+            height: 100vh;
+             justify-content: center;
+            align-items: center;
+           
+        
+        }
+        .box{
+        
+            height: 50vh;
+            width: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            flex-direction: column;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        h1{
+            font-size: 44px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        #counter{
+            font-size: 44px;
+font-weight: bolder;
+font-family: 'Josefin Sans', sans-serif;
+        }
+        button{
+            padding: 5px 10px ;
+            border-radius: 5px;
+            font-weight: bolder;
+            background-color: cadetblue;
+            border: 2px solid green;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        button:hover{
+            background: #ddd ;
+            letter-spacing: 1.5px;
+            transition: 0.5s;
+        }
+        footer{
+            text-align: center;
+            position:absolute;
+            bottom: 5px;
+            width: 100%;
+            height: 20px;
+        display: grid;
+        align-items: center;
+        font-weight: bolder;
+        border-top: 2px solid gray;
+        background: green;
+        font-size: 15px;
+        color: white;
+        }
+        a{
+            text-decoration: none;
+            font-weight: bolder;
+            font-family: 'Josefin Sans', sans-serif;
+            padding: 5px 10px;
+            background-color: green;
+            color: white;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="">Contact Me</a>
+        <div class="box">
+<h1>Counter</h1><br>
+<span id="counter">0</span><br>
+<div>
+<button id="decreament">Decrease</button>
+<button id="reset">Reset</button>
+<button id="increament">Increase</button>
+</div>
+</div>
+    </div>
+    <script>
+        const counter = document . getElementById("counter");
+        const increament = document . getElementById("increament");
+        const reset = document.getElementById("reset");
+            const decreament = document.getElementById("decreament");
+counterval=0;
+            increament.addEventListener("click",function(e){
+    counterval++;
+    counter.innerHTML=counterval;
+    if (counterval > 0) {
+                    counter.style.color = "green";
+                }
+});
+    reset.addEventListener("click", function (e) {
+        counterval=0;
+    counter.innerHTML = counterval;
+        if (counterval == 0) {
+            counter.style.color = "black";
+        }
+            console.log(e);
+
+    });
+    decreament.addEventListener("click", function (e) {
+            counterval--;
+    counter.innerHTML = counterval;
+        if (counterval < 0) {
+            counter.style.color = "red";
+        }
+        });
+        
+    </script>
+    <footer>
+        <span>Created By Bhanu prakash</a> | <i class="fa fa-copyright" aria-hidden="true"></i>
+            2020 All rights reserved.</span>
+    </footer>
+</body>
+</html>
